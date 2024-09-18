@@ -1,40 +1,12 @@
 package pro.sky.calculator;
 
-import org.springframework.stereotype.Service;
+public interface CalculatorService {
 
-@Service
-public class CalculatorService implements CalculatorServiceInt {
+    String plus(Integer num1, Integer num2);
 
-    public String welcome() {
-        return "Добро пожаловать в калькулятор";
-    }
+    String minus(Integer num1, Integer num2);
 
-    @Override
-    public String plus(int number1, int number2) {
-        return number1 + " + " + number2 + " = " + (number1 + number2);
-    }
+    String multiply(Integer num1, Integer num2);
 
-    @Override
-    public String minus(int number1, int number2) {
-        return number1 + " - " + number2 + " = " + (number1 - number2);
-    }
-
-    @Override
-    public String multiply(int number1, int number2) {
-        return number1 + " * " + number2 + " = " + (number1 * number2);
-    }
-
-    @Override
-    public String divide(int number1, int number2) {
-        return number1 + " / " + number2 + " = " + (number1 / number2);
-    }
-
-    public String textError() {
-        return "Введите корректные значения";
-    }
-
-    public String textErrorWithDivideNull() {
-        return "Делить на ноль нельзя";
-    }
+    String divide(Integer num1, Integer num2);
 }
-
